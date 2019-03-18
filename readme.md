@@ -49,8 +49,38 @@ This is the hw03 sample. Please follow the steps below.
 
 --------------------
 
-- [x] **If you volunteer to give the presentation next week, check this.**
+**If you volunteer to give the presentation next week, check this.**
 
 --------------------
 
 **★★★ Please take your note here ★★★**
+
+
+# 實驗內容
+
+透過利用反組譯來觀察在 C code 中是如何return回傳值  
+
+
+# main.c
+int OneArgAdd(int a,int b){return a+b;}
+
+int MultiArgAdd(int a,int b,int c,int d,int e){return a+b+c+d+e;}  
+
+void reset_handler(void)  
+
+{  
+
+    int a=1,b=2,c,d,e,f;  
+    
+    c=OneArgAdd(a,b);  
+    
+    d=OneArgAdd(c,10); 
+    
+    e=20;  
+    
+    f=MultiArgAdd(a,b,c,d,e);  
+    
+    while(1);  
+    
+}
+
